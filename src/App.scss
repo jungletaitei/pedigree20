@@ -1,0 +1,119 @@
+@use "index";
+@import "bootstrap"; // so we can override the default button color from bootstrap
+
+
+$nodePurple: index.$nodePurple;
+$disabledGrey: #C4C4C4;
+$outlineGrey: #979797;
+
+$buttonRadius: 20px;
+$buttonPaddingLeft: 20px;
+$buttonPaddingRight: 20px;
+
+.btn-group {
+    display: flex;
+    border: 1px solid $outlineGrey;
+    border-radius: $buttonRadius;
+}
+
+.btn-group button {
+    background-color: $disabledGrey;
+    border: none;
+    border-radius: none;
+}
+
+.dropdown {
+    border:none;
+}
+
+.btn-primary {
+    @include button-variant($disabledGrey, 
+        $nodePurple, 
+        $nodePurple, 
+        $nodePurple, 
+        $nodePurple, 
+        $nodePurple
+    );
+}
+
+.btn-primary {
+    //background-color: $disabledGrey;
+    border-radius: $buttonRadius;
+    padding-left: $buttonPaddingLeft;
+    padding-right: $buttonPaddingRight;
+    border: none;
+}
+
+.gender-buttons button {
+    margin-right: 5px;
+    width: 100px;
+}
+
+#search-button {
+    margin-left: 20px;
+}
+
+/** NODE STYLING **/
+
+.node {
+    cursor: pointer;
+}
+
+
+text.node {
+    fill: #fff;
+}
+
+.empty-node rect {
+    fill: #FFFFFF;
+    stroke: #DEDEDE;
+    stroke-width: 2px;
+    stroke-dasharray: 7px;
+}
+
+.empty-node text {
+    fill: #979797;
+    font-weight: bold;
+}
+
+.node rect { 
+    fill: #FFF;
+    stroke: #4F2684;
+    stroke-width: 2px;
+}
+  
+.node text {
+    fill: #000;
+    font-weight: bold;
+}
+  
+.node {
+    cursor: pointer;
+}
+
+.empty-node {
+    cursor: pointer;
+}
+
+#source-node rect {
+    fill:#4F2684;
+    stroke: none;
+}
+  
+#source-node text {
+    fill: #FFF
+}
+
+/** Context menu **/
+
+.context-option:hover {
+    fill: lightgray
+}
+
+.context-option {
+    fill:white
+}
+
+#bottom-button {
+    justify-self: right;
+}

@@ -1,0 +1,35 @@
+$nodePurple: #4F2684;
+
+#position-element {
+  display: grid;
+  justify-content: center;
+}
+
+text {
+  fill:orange;
+}
+
+.app-container {
+  border: 1px dotted red;
+}
+
+.root-node rect {
+  fill: $nodePurple;
+}
+
+.root-node text {
+  fill: white;
+}
+
+#tree-container-rect {
+  fill: white;
+  stroke: lightblue;
+  stroke-width: 2px;
+}
+
+.link-lines {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+}
+
